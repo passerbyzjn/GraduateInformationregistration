@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>毕业生信息登记</title>
+		<link relm="stylesheet" type="text/css" href="index.css" charset="utf-8">
+	</head>
+	<body>
+		<image src="https://pub-files.jinshuju.net/hi/20180704102914_c9747f@hixlarge" width=100%>
+		<form id="main">
+			<h1><b>毕业生信息登记</b></h1>
+			<p>本表面向小金大学的毕业生进行报名和信息收集工作，在本表中，您需要	填写自己的姓名、届别等信息。</p>
+			<hr />
+			<p><b>姓名</b></p>
+			<input type="text" id="myname" required="required">
+
+			<p><b>性别</b></p>
+			<input type="radio" name="sex" value="male">
+			<label for="male">男</label>
+			<input type="radio" name="sex" value="female">
+			<label for="female">女</label>
+
+			<p><b>学号</b></p>
+			<input type="number" name="studentid" class="main" id="student-id" required="required">
+
+			<p><b>联系电话</b></p>
+			<p>手机号是关联你的资料的唯一途径，请确保手机号的准确。</p>
+			<input type="tel" name="phone-number" class="main" id="phone-number" required="required">
+
+			<p><b>邮箱</b></p>
+			<input type="email" name="email" class="main" id="mail" required>
+
+			<p><b>就业情况</b></p>
+			<input type="radio" name="job" class="main" id="state-owned" value="state-owned" required="required">
+			<label for="state-owned">国有企业</label><br />
+			<input type="radio" name="job" class="main" id="private" value="private" required="required">
+			<label for="private">私有企业</label><br />
+			<input type="radio" name="job" class="main" id="dopioneeringwork" value="dopioneeringwork" required="required">
+			<label for="dopioneeringwork">自主创业</label><br />
+			<input type="radio" name="job" id="other" value="other" required="required">
+			<label for="other">其他</label>
+			<input type="text" name="job" id="others"><br />
+
+			<p><b>对母校评分</b></p>
+			<div class="content">
+				<div class="stars">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="info">请评分</div>
+			</div>
+			<div >
+				<p><b>你还想对母校说些什么？</b></p>
+				<p>如果您有任何意见，或者其它想说的话，可以填在这里，您说的话将有可能被选中放在活动的展板上，所以，如果您不希望这些话被显示在展板上的话，请备注说明【具体方法就是打个括弧】。</p>
+				<input type="text" id="message-board" class="main"  placeholder="制表人你为何那么帅">
+				<hr />
+				<button type="submit" onclick="sbumitTable()">提交</button>
+			</div>
+		</form>
+		<div>
+			<table border="1" align="center" id="table">
+				<caption>毕业生信息登记表</caption>
+					<tr>
+						<th>序号</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>学号</th>
+						<th>联系电话</th>
+						<th>邮箱</th>
+						<th>就业情况</th>
+						<th>对校评分</th>
+						<th>其他</th>
+					</tr>
+			</table>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>
